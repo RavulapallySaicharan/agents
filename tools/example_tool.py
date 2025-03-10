@@ -1,4 +1,4 @@
-tool_template = """
+
 # Load environment variables
 from dotenv import load_dotenv
 import requests
@@ -26,28 +26,28 @@ from langgraph.graph.message import AnyMessage, add_message
 from langgraph.checkpoint.memory import MemorySaver
 
 
-@tool("{tool_name}")
-def {tool_name}(config: RunnableConfig, **kwargs) -> {return_type}:
-    \"""
-    {tool_description}
+@tool("example_tool")
+def example_tool(config: RunnableConfig, **kwargs) -> str:
+    """
+    This is an example tool.
 
     Args:
-        {kwargs_description}
+        param1 (str): Description of param1.
+      param2 (str):Description of param2
 
     Returns:
-        {return_description}
+        A string result.
 
     Raises:
-        {error_type}
-    \"""
+        ValueError
+    """
 
 
     try:
-        response = requests.get("{api_url}", params=kwargs)
+        response = requests.get("https://api.example.com/data", params=kwargs)
         response.raise_for_status()
         data = response.json()
         return data
     except requests.exceptions.RequestException as e:
-        raise {error_type}(str(e))
+        raise ValueError(str(e))
 
-"""

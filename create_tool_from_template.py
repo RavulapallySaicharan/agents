@@ -16,7 +16,7 @@ def create_tool_file(tool_name, return_type, tool_description, kwargs_descriptio
 
 
     # Create a file with the tool name as the file name
-    file_name = os.path.join("tools", "(tool_name).Py")
+    file_name = os.path.join("tools", f"{tool_name}.py")
     with open(file_name, 'w') as file:
         file.write(filled_template)
 
