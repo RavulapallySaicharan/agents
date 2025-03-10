@@ -33,5 +33,5 @@ if __name__ == "__main__":
         kwargs_description="param1 (str): Description of param1.\n      param2 (str):Description of param2",
         return_description="A string result.",
         error_type="ValueError",
-        api_url="https://api.example.com/data
+        api_url="https://api.example.com/data"
         )
