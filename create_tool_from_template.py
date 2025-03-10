@@ -27,11 +27,11 @@ print(f"File '(file_name)' has been created successfully.")
 if __name__ == "__main__":
     # Example usage
     create_tool_file(
-        tool_name= "example_tool"
-        return_type="str"
-        tool description="This is an example tool.
-        kwargs_description="param1 (str): Description of param1.\n      param2 (str):Description of param2"
-        return_description="A string result.
-        error_type="ValueError"
+        tool_name= "example_tool",
+        return_type="str",
+        tool_description="This is an example tool.",
+        kwargs_description="param1 (str): Description of param1.\n      param2 (str):Description of param2",
+        return_description="A string result.",
+        error_type="ValueError",
         api_url="https://api.example.com/data
-    )
+        )
